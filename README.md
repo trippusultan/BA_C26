@@ -1,105 +1,190 @@
-# Cricket 26 - Modern Website UI/UX
+# Cricket 26 - Modern Website
 
-A completely redesigned, modern website for Cricket 26 featuring cutting-edge UI/UX design principles, responsive layouts, and smooth animations.
+A modern, fully responsive website for Cricket 26 built with **Next.js 14**, **TypeScript**, **shadcn/ui**, and **Tailwind CSS**.
+
+## Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Fonts**: [Google Fonts](https://fonts.google.com/) (Inter, Poppins)
 
 ## Features
 
 ### Design Highlights
 
-- **Modern Aesthetic**: Clean, contemporary design with a focus on user experience
-- **Responsive Layout**: Fully responsive design that works seamlessly across all devices (mobile, tablet, desktop)
-- **Smooth Animations**: Engaging scroll animations and interactive elements
-- **Accessibility**: Keyboard navigation support and semantic HTML
-- **Performance Optimized**: Lazy loading, throttled scroll events, and optimized animations
+- ✅ **Modern UI/UX**: Clean, contemporary design with smooth animations
+- ✅ **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- ✅ **Type-Safe**: Built entirely with TypeScript for better DX
+- ✅ **Component-Based**: Modular, reusable React components
+- ✅ **Accessible**: WCAG compliant with semantic HTML
+- ✅ **Performance**: Optimized with Next.js 14 App Router
+- ✅ **Dark Mode Ready**: Uses Tailwind's dark mode capabilities
 
 ### Key Sections
 
-1. **Hero Section**
-   - Eye-catching headline with call-to-action buttons
-   - Animated statistics showcase
-   - Smooth scroll indicator
-   - Parallax scrolling effects
+1. **Hero Section** - Eye-catching landing with animated stats
+2. **Features** - Showcase of 6 key game features with icons
+3. **Game Modes** - Detailed cards for Career, Tournament, and Online modes
+4. **Gallery** - Visual showcase with hover effects
+5. **System Requirements** - Min/Recommended specs comparison
+6. **CTA Section** - Call-to-action with platform availability
+7. **Footer** - Comprehensive links and social media
 
-2. **Features Grid**
-   - 6 key features with icons and descriptions
-   - Staggered fade-in animations
-   - Hover effects for interactivity
-
-3. **Game Modes**
-   - Detailed cards for Career Mode, Tournament Mode, and Online Multiplayer
-   - Feature lists for each mode
-   - Responsive grid layout
-
-4. **Gallery**
-   - Visual showcase section with placeholder images
-   - Zoom animations on hover
-   - Grid layout optimized for different screen sizes
-
-5. **System Requirements**
-   - Side-by-side comparison of Minimum and Recommended specs
-   - Highlighted recommended requirements
-   - Clean, readable format
-
-6. **Call-to-Action Section**
-   - Purchase options with pricing
-   - Platform availability
-   - Gradient background with animations
-
-7. **Footer**
-   - Comprehensive navigation links
-   - Social media integration
-   - Multi-column responsive layout
-
-## Technology Stack
-
-- **HTML5**: Semantic markup for better SEO and accessibility
-- **CSS3**:
-  - CSS Grid and Flexbox for layouts
-  - CSS Custom Properties (variables) for theming
-  - Smooth transitions and animations
-  - Media queries for responsive design
-- **JavaScript (Vanilla)**:
-  - No external dependencies
-  - Intersection Observer API for scroll animations
-  - Event delegation for performance
-  - Throttle and debounce utilities
-
-## Design System
-
-### Color Palette
-
-- **Primary**: `#2D5F3F` (Cricket Green)
-- **Primary Dark**: `#1a3a26`
-- **Secondary**: `#FFB81C` (Gold/Yellow)
-- **Accent**: `#FF6B35` (Orange)
-- **Background Light**: `#f8f9fa`
-- **Background Dark**: `#0a0e0d`
-
-### Typography
-
-- **Primary Font**: Poppins (headings)
-- **Secondary Font**: Roboto (body text)
-- Font sizes scale responsively across breakpoints
-
-### Spacing
-
-- Consistent spacing system using CSS variables
-- Section padding: 100px vertical (60px on mobile)
-- Container max-width: 1200px
-
-## File Structure
+## Project Structure
 
 ```
 BA_C26/
-├── index.html              # Main HTML file
-├── css/
-│   └── styles.css         # All styles and responsive design
-├── js/
-│   └── main.js            # Interactive functionality
-├── assets/
-│   └── images/            # Image assets (placeholder)
-└── README.md              # Documentation
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Home page
+│   └── globals.css         # Global styles and Tailwind config
+├── components/
+│   ├── ui/                 # shadcn/ui components
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   └── separator.tsx
+│   ├── navigation.tsx      # Main navigation
+│   ├── hero.tsx           # Hero section
+│   ├── features.tsx       # Features grid
+│   ├── game-modes.tsx     # Game modes section
+│   ├── gallery.tsx        # Gallery section
+│   ├── system-requirements.tsx
+│   ├── cta-section.tsx
+│   └── footer.tsx
+├── lib/
+│   └── utils.ts           # Utility functions
+├── public/                # Static assets
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── next.config.js
+└── components.json        # shadcn/ui config
 ```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd BA_C26
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## Color Palette
+
+The design uses a cricket-themed color scheme:
+
+- **Primary**: Cricket Green (`hsl(152, 45%, 28%)`)
+- **Secondary**: Gold/Yellow (`hsl(45, 93%, 55%)`)
+- **Background**: Light/Dark variants
+- **Accent**: Muted tones for secondary elements
+
+Colors are defined in `app/globals.css` using CSS custom properties and can be easily customized.
+
+## Customization
+
+### Adding New Components
+
+shadcn/ui components can be added via CLI:
+
+```bash
+npx shadcn-ui@latest add [component-name]
+```
+
+### Modifying Theme
+
+Edit `app/globals.css` to change color variables:
+
+```css
+:root {
+  --primary: 152 45% 28%;
+  --secondary: 45 93% 55%;
+  /* ... */
+}
+```
+
+### TypeScript Configuration
+
+The project uses strict TypeScript settings. Modify `tsconfig.json` as needed for your preferences.
+
+## Component Architecture
+
+### UI Components (`components/ui/`)
+
+Reusable shadcn/ui components:
+- `Button` - Flexible button with variants
+- `Card` - Container with header, content, footer
+- `Separator` - Horizontal/vertical dividers
+
+### Page Components (`components/`)
+
+Section-specific components with TypeScript:
+- Type-safe props
+- Framer Motion animations
+- Responsive design patterns
+- Accessibility features
+
+## Animations
+
+Powered by **Framer Motion** for smooth, performant animations:
+
+- Scroll-triggered animations (`whileInView`)
+- Staggered transitions
+- Hover effects
+- Page load animations
+
+## Performance
+
+- **Next.js 14 App Router**: Server components by default
+- **Code Splitting**: Automatic route-based splitting
+- **Image Optimization**: Next.js Image component ready
+- **Font Optimization**: Google Fonts with `next/font`
+
+## Accessibility
+
+- Semantic HTML5 elements
+- ARIA labels on interactive elements
+- Keyboard navigation support
+- Focus indicators
+- Color contrast compliance
 
 ## Browser Support
 
@@ -107,173 +192,63 @@ BA_C26/
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
 
-## Responsive Breakpoints
+## Scripts
 
-- **Desktop**: > 968px
-- **Tablet**: 600px - 968px
-- **Mobile**: < 600px
-
-## Interactive Features
-
-1. **Navigation**
-   - Fixed navbar with scroll effect
-   - Active link highlighting based on scroll position
-   - Mobile hamburger menu
-   - Smooth scroll to sections
-
-2. **Animations**
-   - Fade-in on scroll for all major sections
-   - Parallax effect in hero section
-   - Counter animation for statistics
-   - Ripple effect on button clicks
-   - Hover effects on cards and links
-
-3. **UX Enhancements**
-   - Scroll-to-top button
-   - Keyboard navigation (ESC to close menu)
-   - Loading animation
-   - Smooth transitions throughout
-
-## Performance Optimizations
-
-- Lazy loading for images
-- Throttled scroll events
-- Debounced resize events
-- CSS transform for animations (GPU-accelerated)
-- Minimal JavaScript dependencies
-- Optimized CSS selectors
-
-## Accessibility Features
-
-- Semantic HTML5 elements
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Focus indicators
-- Color contrast ratios meet WCAG standards
-- Alt text ready for images
-
-## Getting Started
-
-### Option 1: Direct Browser Opening
-
-Simply open `index.html` in your web browser.
-
-### Option 2: Local Development Server
-
-For the best experience with a local server:
-
-**Using Python:**
 ```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
 ```
 
-**Using Node.js (http-server):**
+## Environment Variables
+
+Create a `.env.local` file for environment-specific variables:
+
+```env
+# Add your environment variables here
+NEXT_PUBLIC_API_URL=
+```
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy is using [Vercel](https://vercel.com/):
+
 ```bash
-npx http-server
+npm i -g vercel
+vercel
 ```
 
-**Using PHP:**
-```bash
-php -S localhost:8000
-```
+### Other Platforms
 
-Then navigate to `http://localhost:8000` in your browser.
+Can be deployed to any platform supporting Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- Docker
 
-## Customization
+## Contributing
 
-### Changing Colors
-
-Edit the CSS custom properties in `css/styles.css`:
-
-```css
-:root {
-    --primary-color: #2D5F3F;
-    --secondary-color: #FFB81C;
-    /* ... other variables */
-}
-```
-
-### Adding Content
-
-1. Replace placeholder text in `index.html`
-2. Add actual images to `assets/images/`
-3. Update image paths in HTML
-
-### Modifying Layout
-
-- Grid layouts can be adjusted in the CSS
-- Responsive breakpoints can be customized
-- Section spacing controlled via CSS variables
-
-## Future Enhancements
-
-Potential improvements for future versions:
-
-- [ ] Add video backgrounds for hero section
-- [ ] Integrate actual game screenshots
-- [ ] Add player testimonials section
-- [ ] Implement newsletter signup
-- [ ] Add blog/news section
-- [ ] Integrate e-commerce functionality
-- [ ] Add language switcher
-- [ ] Implement dark/light theme toggle
-- [ ] Add live chat support
-- [ ] Create admin panel for content management
-
-## Credits
-
-- **Design & Development**: Big Ant Studios Web Team
-- **Fonts**: Google Fonts (Poppins, Roboto)
-- **Icons**: Unicode emoji (can be replaced with Font Awesome or custom icons)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
 © 2026 Big Ant Studios. All rights reserved.
 
----
+## Credits
 
-## Notes for Developers
-
-### Code Structure
-
-The codebase follows a modular approach:
-
-- **HTML**: Semantic sections with meaningful IDs for navigation
-- **CSS**: Organized by sections with clear comments
-- **JavaScript**: Functional modules with clear separation of concerns
-
-### Best Practices Applied
-
-- BEM-inspired naming conventions for CSS classes
-- Progressive enhancement approach
-- Mobile-first responsive design
-- Accessibility-first development
-- Performance-conscious implementations
-
-### Testing Checklist
-
-- [ ] Test on multiple browsers
-- [ ] Verify mobile responsiveness
-- [ ] Check keyboard navigation
-- [ ] Validate HTML/CSS
-- [ ] Test with slow network
-- [ ] Verify all animations work
-- [ ] Check color contrast
-- [ ] Test all interactive elements
-
-## Support
-
-For issues or questions:
-- Create an issue in the repository
-- Contact Big Ant Studios support
-- Visit the community forums
+- **Development**: Big Ant Studios Web Team
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide](https://lucide.dev/)
+- **Fonts**: Google Fonts (Inter, Poppins)
 
 ---
 
-**Built with ❤️ for cricket fans worldwide**
+**Built with Next.js, TypeScript, and shadcn/ui** 🏏
